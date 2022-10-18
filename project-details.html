@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Welcome : Twinn CRM</title>
+
+    <script>
+      $(document).ready(function () {
+        $("#btnFilter").click(function () {
+          $("#filterData").toggleClass("d-none");
+        });
+
+        // Change Layout
+        $("#gridView").click(function () {
+          $(".list-view").addClass("d-none");
+          $(".grid-view").removeClass("d-none");
+          $(this).addClass("active");
+          $("#listView").removeClass("active");
+        });
+        $("#listView").click(function () {
+          $(".grid-view").addClass("d-none");
+          $(".list-view").removeClass("d-none");
+          $(this).addClass("active");
+          $("#gridView").removeClass("active");
+        });
+
+        $("#activity").click(function () {
+          $(".t-timeline-container").removeClass("d-none");
+        });
+
+        $("#hideActivity").click(function () {
+          $(".t-timeline-container").addClass("d-none");
+        });
+
+        // $(".new-project-modal").modal("show");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation bar here -->
+    <nav class="navbar navbar-expand-lg theme-navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/logo-theme.svg" alt="" />
+        </a>
+        <div class="nav-row">
+          <div class="action-nav">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="right-section">
+              <a class="right-item" href=""
+                ><img src="./assets/icons/search.svg" class="nav-icon" alt=""
+              /></a>
+              <a class="right-item question-icon" href=""
+                ><img src="./assets/icons/question.svg" class="nav-icon" alt=""
+              /></a>
+              <a class="right-item notification" href=""
+                ><img src="./assets/icons/bell.svg" class="nav-icon" alt="" />
+                <div class="notify-badge">9</div>
+              </a>
+
+              <div class="profile-dropdown">
+                <button class="profile-btn">
+                  <img
+                    src="https://images.unsplash.com/photo-1531300185372-b7cbe2eddf0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjBmYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    class="nav-icon"
+                    alt=""
+                  />
+                </button>
+                <div class="active-badge"></div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/dasboard.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/stacks.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/team.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/clients.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </div>
+                  Clients</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/assets.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Assets</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation bar End here -->
+
+    <main class="main-container">
+      <div class="t-project-detail-section">
+        <div class="t-menu-bar">
+          <nav class="menu-sec">
+            <a class="menu-item active" href=""
+              ><img src="./assets/icons/nav/icon1.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon2.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon3.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon4.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon5.svg" alt=""
+            /></a>
+          </nav>
+        </div>
+        <div class="primary-sec">
+          <!-- Breadcrumb Component -->
+          <div class="breadcrumb-sec">
+            <nav>
+              <ol class="breadcrumb body-regular">
+                <li class="breadcrumb-item">
+                  <a href="#" class="color-primary"
+                    ><img src="./assets/icons/arrow-left.svg" alt="" />
+                    Projects</a
+                  >
+                </li>
+                <li class="breadcrumb-item active">Moru nature Stays</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="heading">
+            <h1 class="title7">Project Details</h1>
+            <button class="action-btn">
+              <img src="./assets/icons/check.svg" width="18" alt="" />
+            </button>
+          </div>
+          <div class="left-section">
+            <div class="row">
+              <div class="col-sm-8">
+                <form class="t-project-detail-form">
+                  <div class="grid-2">
+                    <div class="form-sec">
+                      <label class="form-label required">Project Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Moru Nature Stays"
+                      />
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label required">Client Name</label>
+                      <input
+                        type="text"
+                        class="form-control mr--10"
+                        placeholder="KALP Homesteads"
+                      />
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label required">Start Date</label>
+                      <input type="date" class="form-control" placeholder="" />
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label">End Date</label>
+                      <input type="date" class="form-control" placeholder="" />
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label">Address</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="4140 Parker Rd. Allentown, New Mexico"
+                      />
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label">Project Type</label>
+                      <select class="form-select">
+                        <option value="1">Hospitality</option>
+                        <option value="2">Hospitality</option>
+                        <option value="3">Hospitality</option>
+                      </select>
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label">Point of Contact</label>
+                      <select class="form-select">
+                        <option value="1">Prabhat Arhaan</option>
+                        <option value="2">Prabhat Arhaan</option>
+                        <option value="3">Prabhat Arhaan</option>
+                      </select>
+                    </div>
+                    <div class="form-sec">
+                      <label class="form-label">Contact Number:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="(629) 555-1099"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-sec mt-3">
+                    <label class="form-label">Description</label>
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="5"
+                      placeholder="Art Design is a real estate organisation founded in 1990. They are present at various locations across the globe. Founded by Mr.Ganeshan Rajan, the parent company have various business units in various business sectors."
+                    ></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="col-sm-4">
+                <div class="img-box">
+                  <img
+                    class="img-fluid"
+                    src="https://images.unsplash.com/photo-1586867026567-b9b63ae58472?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1682&q=80"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <div class="heading">
+              <h1 class="title7">Project Files</h1>
+              <button class="action-btn">
+                <img src="./assets/icons/check.svg" width="18" alt="" />
+              </button>
+            </div>
+            <div class="mt--20">
+              <div class="body-strong">Upload files</div>
+              <button type="button" class="btn btn-download mt-3">
+                <img src="./assets/icons/download-2.svg" width="16" alt="" />
+                Upload files
+              </button>
+
+              <div class="files mt--20 pb-5">
+                <div class="body-medium mb-3">Files</div>
+
+                <div class="grid-4">
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/pdf.svg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Project details.pdf</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/xls.svg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Site measurement.xls</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/room.jpg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Room image.jpg</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/room.jpg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Room image.jpg</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/pdf.svg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Project details.pdf</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/xls.svg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Site measurement.xls</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/room.jpg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Room image.jpg</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img
+                      class="mr-3"
+                      src="./assets/icons/room.jpg"
+                      alt="Generic placeholder image"
+                    />
+                    <div class="media-body">
+                      <div class="file-name">Room image.jpg</div>
+                      <div class="file-size">2 mb</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Team Section -->
+        <div class="project-team-sec">
+          <div class="heading">
+            <div class="title7">Project Team</div>
+            <button class="action-btn">
+              <img src="./assets/icons/edit.svg" width="18" alt="" />
+            </button>
+          </div>
+          <div class="section">
+            <div class="info-sec">
+              <div class="body-medium">Team lead</div>
+              <div class="input-sec">
+                <button class="t-img-add-button">
+                  <img src="./assets/icons/add-plus.svg" alt="" />
+                </button>
+                <select class="form-select">
+                  <option selected>Select member</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="info-sec">
+              <div class="body-medium">Members</div>
+              <div class="input-sec">
+                <button class="t-img-add-button">
+                  <img src="./assets/icons/add-plus.svg" alt="" />
+                </button>
+                <select class="form-select">
+                  <option selected>Select member</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="media-list">
+              <div class="media">
+                <div class="status-img-sec">
+                  <div class="img-circle">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                      alt="Generic placeholder image"
+                    />
+                  </div>
+                  <div class="status green"></div>
+                </div>
+                <div class="media-body">
+                  <h5 class="m-0 body-medium">Jenny Wilson</h5>
+                  <div class="body-regular">jenny.wilson@tooli.qa</div>
+                </div>
+              </div>
+
+              <div class="media gray">
+                <div class="status-img-sec">
+                  <div class="img-circle">
+                    <img
+                      src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                      alt="Generic placeholder image"
+                    />
+                  </div>
+                  <div class="status gray"></div>
+                </div>
+                <div class="media-body">
+                  <h5 class="m-0 body-medium">Jenny Wilson</h5>
+                  <div class="body-regular">jenny.wilson@tooli.qa</div>
+                </div>
+              </div>
+
+              <div class="media">
+                <div class="status-img-sec">
+                  <div class="img-circle">
+                    <img
+                      src="https://images.unsplash.com/photo-1544348817-5f2cf14b88c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                      alt="Generic placeholder image"
+                    />
+                  </div>
+                  <div class="status warning"></div>
+                </div>
+                <div class="media-body">
+                  <h5 class="m-0 body-medium">Jenny Wilson</h5>
+                  <div class="body-regular">jenny.wilson@tooli.qa</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="status-img-sec">
+                  <div class="img-circle">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                      alt="Generic placeholder image"
+                    />
+                  </div>
+                  <div class="status green"></div>
+                </div>
+                <div class="media-body">
+                  <h5 class="m-0 body-medium">Jenny Wilson</h5>
+                  <div class="body-regular">jenny.wilson@tooli.qa</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="bottom-corner-action">
+      <div class="t-timeline-container d-none">
+        <div class="timeline-header">
+          <div class="title7">Activity</div>
+          <div>
+            <button type="button" class="btn btn-link">
+              <img src="./assets/icons/menu-h.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-link">
+              <img src="./assets/icons/more-down-vert.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-link" id="hideActivity">
+              <img src="./assets/icons/minus.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="timeline-style">
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Jenny Wilson</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Commented on <a href="">Tooliqa project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Wade Warren</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Commented on <a href="">Tooliqa project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn-style-none" id="activity">
+          <img src="./assets/icons/simple-comment.svg" alt="" />
+        </button>
+        <button class="btn-style-none">
+          <img src="./assets/icons/time.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

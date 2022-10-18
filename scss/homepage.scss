@@ -1,0 +1,162 @@
+// Homepage style
+.card-sections {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .current-card {
+    width: 100%;
+    .link-style {
+      margin-bottom: 16px;
+    }
+
+    .title1 {
+      color: $theme-secondary;
+      margin-bottom: 4px;
+    }
+  }
+
+  .card-thumb {
+    min-width: 335px;
+    box-shadow: 0px 4px 8px rgba($black, 0.15);
+    border-radius: 19.75px;
+    background: #eff1f8;
+    padding: 21px;
+    background-image: url("../assets/thumb.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 96px;
+
+    @include mobile {
+      min-height: auto;
+      padding: 30px 21px;
+      min-width: 100%;
+    }
+
+    @include tablet {
+      min-height: auto;
+      padding: 30px 21px;
+      min-width: 100%;
+    }
+  }
+
+  .total-project {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+    @include mobile {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    @include tablet {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    > .subtitle {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      color: #7e7e81;
+
+      span {
+        color: #939396;
+        font-weight: 400;
+      }
+    }
+
+    .card-row {
+      display: flex;
+      gap: 16px;
+
+      @include tablet {
+        flex-wrap: nowrap;
+      }
+      @include mobile {
+        flex-wrap: wrap;
+      }
+    }
+
+    .project-card {
+      min-width: 160px;
+      border-radius: 12px;
+      padding: 17px 18px;
+      color: $white;
+      display: flex;
+      min-height: 96px;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 16px;
+
+      @include tablet {
+        min-height: auto;
+        padding: 25px 18px;
+        min-width: auto;
+        width: 100%;
+      }
+
+      @include mobile {
+        min-height: auto;
+        padding: 25px 18px;
+        min-width: auto;
+        width: 47.33%;
+      }
+
+      @include iphone5 {
+        width: 46.33%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+
+      .img-icon {
+        width: 32px;
+        align-self: center;
+        position: relative;
+        top: -3px;
+
+        @include iphone5 {
+          align-self: flex-start;
+          top: 0px;
+        }
+      }
+
+      .subtitle {
+        font-weight: 600;
+      }
+
+      &.blue {
+        background: #80adf8;
+      }
+      &.red {
+        background: #f86b72;
+      }
+      &.yellow {
+        background: #f1c21b;
+      }
+      &.green {
+        background: #8bd766;
+      }
+    }
+  }
+}

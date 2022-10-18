@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 10</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10" transform="translate(1.000000, 1.000017)">
+            <path d="M32.0001,8.20508 L9.0257,8.20508 L9.0257,32 L32.0001,32 L32.0001,8.20508 Z M26.2565,14.7692 L14.7693,14.7692 L14.7693,31.9999 L26.2565,31.9999 L26.2565,14.7692 Z" id="Shape" fill="#0B57D0"></path>
+            <polygon id="Path" stroke="#0B57D0" stroke-linejoin="round" points="9.0257 31.5896 0.41028 23.7948 0.41028 0.41016 9.0257 8.20503"></polygon>
+            <polygon id="Path" stroke="#0B57D0" stroke-linejoin="round" points="31.5897 31.5896 22.9743 23.7948 22.9743 0.41016 31.5897 8.20503"></polygon>
+            <line x1="9.0257" y1="8.20508" x2="31.5898" y2="8.20508" id="Path" stroke="#0B57D0" stroke-linejoin="round"></line>
+            <rect id="Rectangle" stroke="#0B57D0" stroke-linejoin="round" x="9.0505" y="8.14551" width="22.497" height="23.402"></rect>
+            <polygon id="Path" fill="#0B57D0" points="22.9744 0 0 0 0 23.7949 5.74355 23.7949 5.74355 6.56411 17.2307 6.56411 17.2307 23.7949 22.9744 23.7949"></polygon>
+            <rect id="Rectangle" stroke="#0B57D0" stroke-linejoin="round" x="0" y="0.3877" width="23.0141" height="23.402"></rect>
+        </g>
+    </g>
+</svg>
