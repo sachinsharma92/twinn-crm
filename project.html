@@ -25,25 +25,25 @@
 
         // Change Layout
         $("#gridView").click(function () {
-          $(".list-view").addClass("d-none");
+          $(".t-list-view").addClass("d-none");
           $(".grid-view").removeClass("d-none");
           $(this).addClass("active");
           $("#listView").removeClass("active");
         });
         $("#listView").click(function () {
           $(".grid-view").addClass("d-none");
-          $(".list-view").removeClass("d-none");
+          $(".t-list-view").removeClass("d-none");
           $(this).addClass("active");
           $("#gridView").removeClass("active");
         });
 
-        // $(".new-project-modal").modal("show");
+        // $(".t-new-project-modal").modal("show");
       });
     </script>
   </head>
   <body>
     <!-- Navigation bar here -->
-    <nav class="navbar navbar-expand-lg theme-navigation">
+    <nav class="navbar navbar-expand-lg t-theme-navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="./assets/logo-theme.svg" alt="" />
@@ -70,7 +70,7 @@
               /></a>
               <a class="right-item notification" href=""
                 ><img src="./assets/icons/bell.svg" class="nav-icon" alt="" />
-                <div class="notify-badge">9</div>
+                <div class="notify-t-badge">9</div>
               </a>
 
               <div class="profile-dropdown">
@@ -81,7 +81,7 @@
                     alt=""
                   />
                 </button>
-                <div class="active-badge"></div>
+                <div class="active-t-badge"></div>
               </div>
             </div>
           </div>
@@ -164,9 +164,9 @@
     </nav>
     <!-- Navigation bar End here -->
 
-    <main class="main-container">
-      <!-- Action-bar here -->
-      <div class="action-bar">
+    <main class="t-main-container">
+      <!-- t-action-bar here -->
+      <div class="t-action-bar">
         <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-sm-4">
@@ -291,14 +291,14 @@
           </div>
         </div>
       </div>
-      <!-- Action-bar End here -->
+      <!-- t-action-bar End here -->
 
       <div class="grid-view mt-3">
         <div class="container-fluid">
           <div class="row">
             <div class="col">
               <!-- Card here -->
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -308,7 +308,7 @@
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
                   <div class="inline-style">
-                    <div class="badge">Due in 2 days</div>
+                    <div class="t-badge">Due in 2 days</div>
                     <div class="dropdown">
                       <button
                         class="btn btn-link dropdown-toggle"
@@ -404,7 +404,7 @@
               <!-- Card here End -->
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -413,7 +413,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -459,7 +459,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -468,7 +468,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -514,7 +514,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -523,7 +523,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -569,7 +569,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -578,7 +578,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -626,7 +626,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -635,7 +635,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
-                  <div class="badge due">Due today</div>
+                  <div class="t-badge due">Due today</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -681,7 +681,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style hold">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -690,7 +690,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">On hold | 4/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -736,7 +736,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style completed">
                   <div class="progress">
                     <div class="progress-bar" style="width: 100%"></div>
@@ -745,7 +745,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">Completed | 7/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -791,7 +791,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style completed">
                   <div class="progress">
                     <div class="progress-bar" style="width: 100%"></div>
@@ -800,7 +800,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">Completed | 7/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -846,7 +846,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card project-card">
+              <div class="card t-project-card">
                 <div class="progress-bar-style">
                   <div class="progress">
                     <div class="progress-bar" style="width: 25%"></div>
@@ -855,7 +855,7 @@
                 </div>
                 <div class="card-header">
                   <div class="title-progress">In progress | 6/7</div>
-                  <div class="badge">Due in 2 days</div>
+                  <div class="t-badge">Due in 2 days</div>
                 </div>
                 <a href="#">
                   <div class="img-box">
@@ -904,7 +904,7 @@
         </div>
       </div>
 
-      <div class="list-view d-none">
+      <div class="t-list-view d-none">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-12">
@@ -929,7 +929,7 @@
                       <td>@05/08/2022</td>
                       <td>Design development</td>
                       <td>Design development</td>
-                      <td><div class="badge">Due in 2 days</div></td>
+                      <td><div class="t-badge">Due in 2 days</div></td>
                       <td><img src="./assets/icons/delete.svg" alt="" /></td>
                     </tr>
                     <tr>
@@ -939,7 +939,7 @@
                       <td>@05/08/2022</td>
                       <td>Design development</td>
                       <td>Design development</td>
-                      <td><div class="badge">Due in 2 days</div></td>
+                      <td><div class="t-badge">Due in 2 days</div></td>
                       <td><img src="./assets/icons/delete.svg" alt="" /></td>
                     </tr>
                     <tr>
@@ -949,7 +949,7 @@
                       <td>@05/08/2022</td>
                       <td>Design development</td>
                       <td>Design development</td>
-                      <td><div class="badge due">Due in 2 days</div></td>
+                      <td><div class="t-badge due">Due in 2 days</div></td>
                       <td><img src="./assets/icons/delete.svg" alt="" /></td>
                     </tr>
                     <tr>
@@ -959,7 +959,7 @@
                       <td>@05/08/2022</td>
                       <td>Design development</td>
                       <td>Design development</td>
-                      <td><div class="badge">Due in 2 days</div></td>
+                      <td><div class="t-badge">Due in 2 days</div></td>
                       <td><img src="./assets/icons/delete.svg" alt="" /></td>
                     </tr>
                     <tr>
@@ -969,7 +969,7 @@
                       <td>@05/08/2022</td>
                       <td>Design development</td>
                       <td>Design development</td>
-                      <td><div class="badge">Due in 2 days</div></td>
+                      <td><div class="t-badge">Due in 2 days</div></td>
                       <td><img src="./assets/icons/delete.svg" alt="" /></td>
                     </tr>
                     <tr>
@@ -979,7 +979,7 @@
                       <td>@05/08/2022</td>
                       <td>Design development</td>
                       <td>Design development</td>
-                      <td><div class="badge due">Due in 2 days</div></td>
+                      <td><div class="t-badge due">Due in 2 days</div></td>
                       <td><img src="./assets/icons/delete.svg" alt="" /></td>
                     </tr>
                   </tbody>
@@ -993,7 +993,7 @@
 
     <!-- New Project Modal -->
     <div
-      class="modal fade new-project-modal"
+      class="modal fade t-new-project-modal"
       id="exampleModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"

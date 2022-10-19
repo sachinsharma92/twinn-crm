@@ -25,14 +25,14 @@
 
         // Change Layout
         $("#gridView").click(function () {
-          $(".list-view").addClass("d-none");
+          $(".t-list-view").addClass("d-none");
           $(".grid-view").removeClass("d-none");
           $(this).addClass("active");
           $("#listView").removeClass("active");
         });
         $("#listView").click(function () {
           $(".grid-view").addClass("d-none");
-          $(".list-view").removeClass("d-none");
+          $(".t-list-view").removeClass("d-none");
           $(this).addClass("active");
           $("#gridView").removeClass("active");
         });
@@ -45,13 +45,26 @@
           $(".t-timeline-container").addClass("d-none");
         });
 
-        // $(".new-project-modal").modal("show");
+        // $(".t-new-project-modal").modal("show");
+
+        $("#detailView").click(function () {
+          $(".t-project-detail-view").addClass("d-none");
+          $(".t-project-detail-form").removeClass("d-none");
+          $(this).addClass("d-none");
+          $("#editView").removeClass("d-none");
+        });
+        $("#editView").click(function () {
+          $(".t-project-detail-form").addClass("d-none");
+          $(".t-project-detail-view").removeClass("d-none");
+          $(this).addClass("d-none");
+          $("#detailView").removeClass("d-none");
+        });
       });
     </script>
   </head>
   <body>
     <!-- Navigation bar here -->
-    <nav class="navbar navbar-expand-lg theme-navigation">
+    <nav class="navbar navbar-expand-lg t-theme-navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="./assets/logo-theme.svg" alt="" />
@@ -78,7 +91,7 @@
               /></a>
               <a class="right-item notification" href=""
                 ><img src="./assets/icons/bell.svg" class="nav-icon" alt="" />
-                <div class="notify-badge">9</div>
+                <div class="notify-t-badge">9</div>
               </a>
 
               <div class="profile-dropdown">
@@ -89,7 +102,7 @@
                     alt=""
                   />
                 </button>
-                <div class="active-badge"></div>
+                <div class="active-t-badge"></div>
               </div>
             </div>
           </div>
@@ -172,7 +185,7 @@
     </nav>
     <!-- Navigation bar End here -->
 
-    <main class="main-container">
+    <main class="t-main-container">
       <div class="t-project-detail-section">
         <div class="t-menu-bar">
           <nav class="menu-sec">
@@ -195,11 +208,11 @@
         </div>
         <div class="primary-sec">
           <!-- Breadcrumb Component -->
-          <div class="breadcrumb-sec">
+          <div class="t-breadcrumb-sec">
             <nav>
               <ol class="breadcrumb body-regular">
                 <li class="breadcrumb-item">
-                  <a href="#" class="color-primary"
+                  <a href="/project.html" class="color-primary"
                     ><img src="./assets/icons/arrow-left.svg" alt="" />
                     Projects</a
                   >
@@ -210,14 +223,72 @@
           </div>
           <div class="heading">
             <h1 class="title7">Project Details</h1>
-            <button class="action-btn">
+
+            <button class="action-btn d-none" id="editView">
+              <img src="./assets/icons/edit.svg" width="18" alt="" />
+            </button>
+            <button class="action-btn" id="detailView">
               <img src="./assets/icons/check.svg" width="18" alt="" />
             </button>
           </div>
           <div class="left-section">
             <div class="row">
               <div class="col-sm-8">
-                <form class="t-project-detail-form">
+                <div class="t-project-detail-view">
+                  <div class="grid-2">
+                    <div class="item">
+                      <div class="title">Project Name</div>
+                      <div class="description">Moru Nature Stays</div>
+                    </div>
+                    <div class="item">
+                      <div class="title">Client Name</div>
+                      <div class="description">KALP Homesteads</div>
+                    </div>
+                    <div class="item">
+                      <div class="title">Start Date</div>
+                      <div class="description">20/09/2022</div>
+                    </div>
+                    <div class="item">
+                      <div class="title">End Date</div>
+                      <div class="description">20/09/2024</div>
+                    </div>
+                    <div class="item">
+                      <div class="title">Address</div>
+                      <div class="description">
+                        4140 Parker Rd. Allentown, New Mexico
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="title">Project Type</div>
+                      <div class="description">Hospitality</div>
+                    </div>
+                    <div class="item">
+                      <div class="title">Point of Contact</div>
+                      <div class="description">Hospitality</div>
+                    </div>
+                    <div class="item">
+                      <div class="title">Contact Number:</div>
+                      <div class="description">Prabhat Arhaan</div>
+                    </div>
+
+                    <div class="item">
+                      <div class="title">Contact Number:</div>
+                      <div class="description">(629) 555-1099</div>
+                    </div>
+                  </div>
+
+                  <div class="form-sec mt-3">
+                    <div class="title">Description</div>
+                    <div class="description">
+                      Art Design is a real estate organisation founded in 1990.
+                      They are present at various locations across the globe.
+                      Founded by Mr.Ganeshan Rajan, the parent company have
+                      various business units in various business sectors.
+                    </div>
+                  </div>
+                </div>
+
+                <form class="t-project-detail-form d-none">
                   <div class="grid-2">
                     <div class="form-sec">
                       <label class="form-label required">Project Name</label>
@@ -526,7 +597,7 @@
       </div>
     </main>
 
-    <div class="bottom-corner-action">
+    <div class="t-bottom-corner-action">
       <div class="t-timeline-container d-none">
         <div class="timeline-header">
           <div class="title7">Activity</div>

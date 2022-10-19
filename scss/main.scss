@@ -214,13 +214,13 @@ input.form-control,
   font-weight: 600;
 }
 
-// main-container
-.main-container {
+// t-main-container
+.t-main-container {
   overflow-x: hidden;
 }
 
-// breadcrumb-sec
-.breadcrumb-sec {
+// t-breadcrumb-sec
+.t-breadcrumb-sec {
   display: flex;
   align-items: center;
   margin-bottom: 27px;
@@ -240,7 +240,7 @@ input.form-control,
 }
 
 // Action bar style here
-.action-bar {
+.t-action-bar {
   padding: 20px 0;
 
   .title3 {
@@ -380,7 +380,7 @@ input.form-control,
 }
 
 // Project Card
-.project-card {
+.t-project-card {
   border: none;
   background: none;
   transition: all 0.5s ease-in-out;
@@ -580,7 +580,7 @@ input.form-control,
   }
 }
 
-.badge {
+.t-badge {
   background: #c4d9fc;
   border-radius: 100px;
   padding: 4px 8px;
@@ -600,7 +600,7 @@ input.form-control,
 }
 
 // list view
-.list-view {
+.t-list-view {
   .table > :not(caption) > * > * {
     padding: 0.8rem 0.5rem;
   }
@@ -624,7 +624,7 @@ input.form-control,
 }
 
 // new-project
-.new-project-modal {
+.t-new-project-modal {
   .modal-body {
     padding: 24px;
   }
@@ -699,7 +699,7 @@ input.form-control,
 }
 
 // Bottom Corner Action
-.bottom-corner-action {
+.t-bottom-corner-action {
   background: $white;
   box-shadow: -2px -3px 24px rgba($black, 0.25);
   border-radius: 16px 0px 0px 0px;

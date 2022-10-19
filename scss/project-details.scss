@@ -3,7 +3,7 @@
   display: flex;
 
   .t-menu-bar {
-    width: 64px;
+    min-width: 64px;
     border-right: 2px solid #e9ebeb;
     min-height: 100vh;
   }
@@ -24,7 +24,7 @@
   }
 
   .project-team-sec {
-    width: 349px;
+    min-width: 349px;
     border-left: 2px solid #e9ebeb;
     min-height: 100vh;
     padding-top: 68px;
@@ -149,5 +149,25 @@
     border: none;
     background: none;
     padding: 0;
+  }
+
+  .t-project-detail-view {
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+      color: #7e7e81;
+      margin-bottom: 5px;
+    }
+    .description {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #434346;
+    }
   }
 }

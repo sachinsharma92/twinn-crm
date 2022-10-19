@@ -1,5 +1,5 @@
 // Navigation style here
-.theme-navigation {
+.t-theme-navigation {
   max-height: 80px;
   padding: 0 33px;
   background: $white;
@@ -245,7 +245,7 @@
         object-fit: cover;
       }
     }
-    .active-badge {
+    .active-t-badge {
       background: $theme-success;
       width: 12px;
       height: 12px;
@@ -261,7 +261,7 @@
   .notification {
     position: relative;
 
-    .notify-badge {
+    .notify-t-badge {
       background: $theme-error;
       width: 16px;
       height: 16px;
