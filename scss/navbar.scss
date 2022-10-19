@@ -1,7 +1,6 @@
 // Navigation style here
 .t-theme-navigation {
   max-height: 80px;
-  padding: 0 33px;
   background: $white;
   position: sticky;
   top: 0;
@@ -10,12 +9,10 @@
 
   @include mobile {
     height: 51px;
-    padding: 0px;
   }
 
   @include tablet {
     height: 51px;
-    padding: 0px;
   }
 
   .nav-row {
