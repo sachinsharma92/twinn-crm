@@ -2,11 +2,13 @@
 .t-project-detail-section {
   display: flex;
 
-  .t-menu-bar {
-    min-width: 64px;
-    border-right: 2px solid #e9ebeb;
-    min-height: 100vh;
+  @include mobile {
+    flex-direction: column;
   }
+  @include tablet {
+    // flex-direction: column;
+  }
+
   .heading {
     border-bottom: 1px solid #bcbfc1;
     padding-bottom: 14px;
@@ -18,8 +20,23 @@
     padding: 28px 0 0 28px;
     flex-grow: 1;
 
+    @include mobile {
+      padding: 28px 15px;
+    }
+
+    @include tablet {
+      padding: 28px 15px;
+    }
+
     .heading {
       padding-right: 42px;
+
+      @include mobile {
+        padding-right: 20px;
+      }
+      @include tablet {
+        padding-right: 20px;
+      }
     }
   }
 
@@ -28,6 +45,43 @@
     border-left: 2px solid #e9ebeb;
     min-height: 100vh;
     padding-top: 68px;
+
+    @include mobile {
+      right: -100%;
+      min-width: 70%;
+      min-height: auto;
+      height: calc(100vh - 51px);
+      position: fixed;
+      transition: all 0.5s ease-in-out;
+      background: $white;
+      box-shadow: -2px -3px 24px rgba($black, 0.1);
+      padding-top: 20px;
+      z-index: 1;
+      overflow-x: scroll;
+    }
+
+    @include tablet {
+      right: -100%;
+      min-width: 70%;
+      min-height: auto;
+      height: calc(100vh - 51px);
+      position: fixed;
+      transition: all 0.5s ease-in-out;
+      background: $white;
+      box-shadow: -2px -3px 24px rgba($black, 0.1);
+      padding-top: 20px;
+      z-index: 1;
+      overflow-x: scroll;
+    }
+
+    &.section-active {
+      @include tablet {
+        right: 0%;
+      }
+      @include mobile {
+        right: 0%;
+      }
+    }
 
     .section {
       padding: 16px;
@@ -104,6 +158,10 @@
 
   .left-section {
     padding-right: 20px;
+
+    @include tablet {
+      padding-right: 0px;
+    }
   }
 
   .img-box {
@@ -114,6 +172,16 @@
     height: 200px;
     margin: 30px auto 0;
     position: relative;
+
+    @include mobile {
+      width: 100%;
+      height: 250px;
+    }
+
+    @include tablet {
+      width: 100%;
+      height: 200px;
+    }
 
     img {
       position: absolute;

@@ -10,10 +10,12 @@
 
   @include mobile {
     height: 51px;
+    padding: 0px;
   }
 
   @include tablet {
     height: 51px;
+    padding: 0px;
   }
 
   .nav-row {
