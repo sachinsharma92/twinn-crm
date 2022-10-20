@@ -1,0 +1,9 @@
+.t-manager-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.t-manager-section .task-section {
+  background-color: red;
+  width: 100%;
+}

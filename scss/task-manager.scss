@@ -1,0 +1,93 @@
+// Manager Section
+.t-manager-section {
+  display: flex;
+
+  .flex-layout {
+    display: flex;
+    padding: 5px;
+  }
+
+  .task-section {
+    width: 100%;
+  }
+
+  .t-breadcrumb-sec {
+    padding: 24px 24px 0;
+  }
+
+  .timeline-layout {
+    padding: 8px;
+    background: #efefef;
+    border-radius: 4px;
+    width: 167px;
+    min-height: calc(100vh - 170px);
+  }
+
+  .timeline-section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 116px 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 2px;
+      height: 100%;
+      background: #ccd1d9;
+      z-index: 1;
+    }
+
+    .custom-badge {
+      background: #c4d9fc;
+      border-radius: 12px;
+      color: $theme-primary;
+      padding: 2px 16px;
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 10px;
+    }
+
+    .marker {
+      width: 100%;
+      border-radius: 12px;
+      background: #b5b5b7;
+      z-index: 1;
+      padding: 10px 12px;
+      text-align: center;
+      position: relative;
+      font-size: 13px;
+      line-height: 140%;
+      display: flex;
+      flex-direction: column;
+      color: $white;
+
+      &.complete {
+        background: #4bb218;
+        left: 0px;
+      }
+
+      &.in-progress {
+        background: $theme-primary;
+        left: 0px;
+      }
+
+      img {
+        margin-left: 10px;
+      }
+    }
+
+    .timeline-content {
+      width: 95%;
+      padding: 0 15px;
+      color: #666;
+    }
+  }
+}

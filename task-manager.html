@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Welcome : Twinn CRM</title>
+
+    <script>
+      $(document).ready(function () {
+        $("#btnFilter").click(function () {
+          $("#filterData").toggleClass("d-none");
+        });
+
+        // Change Layout
+        $("#gridView").click(function () {
+          $(".t-list-view").addClass("d-none");
+          $(".grid-view").removeClass("d-none");
+          $(this).addClass("active");
+          $("#listView").removeClass("active");
+        });
+        $("#listView").click(function () {
+          $(".grid-view").addClass("d-none");
+          $(".t-list-view").removeClass("d-none");
+          $(this).addClass("active");
+          $("#gridView").removeClass("active");
+        });
+
+        $("#activity").click(function () {
+          $(".t-timeline-container").removeClass("d-none");
+        });
+
+        $("#hideActivity").click(function () {
+          $(".t-timeline-container").addClass("d-none");
+        });
+
+        // $(".t-new-project-modal").modal("show");
+
+        $("#detailView").click(function () {
+          $(".t-project-detail-view").addClass("d-none");
+          $(".t-project-detail-form").removeClass("d-none");
+          $(this).addClass("d-none");
+          $("#editView").removeClass("d-none");
+        });
+        $("#editView").click(function () {
+          $(".t-project-detail-form").addClass("d-none");
+          $(".t-project-detail-view").removeClass("d-none");
+          $(this).addClass("d-none");
+          $("#detailView").removeClass("d-none");
+        });
+
+        $("#projectTeam").click(function () {
+          $(".project-team-sec").toggleClass("section-active");
+          $(".txt-plus").toggleClass("button-toggle");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation bar here -->
+    <nav class="navbar navbar-expand-lg t-theme-navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/logo-theme.svg" alt="" />
+        </a>
+        <div class="nav-row">
+          <div class="action-nav">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="right-section">
+              <a class="right-item" href=""
+                ><img src="./assets/icons/search.svg" class="nav-icon" alt=""
+              /></a>
+              <a class="right-item question-icon" href=""
+                ><img src="./assets/icons/question.svg" class="nav-icon" alt=""
+              /></a>
+              <a class="right-item notification" href=""
+                ><img src="./assets/icons/bell.svg" class="nav-icon" alt="" />
+                <div class="notify-t-badge">9</div>
+              </a>
+
+              <div class="profile-dropdown">
+                <button class="profile-btn">
+                  <img
+                    src="https://images.unsplash.com/photo-1531300185372-b7cbe2eddf0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjBmYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    class="nav-icon"
+                    alt=""
+                  />
+                </button>
+                <div class="active-t-badge"></div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/dasboard.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/stacks.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/team.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/clients.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </div>
+                  Clients</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-box">
+                    <img
+                      src="./assets/icons/assets.svg"
+                      class="nav-icon"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  Assets</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation bar End here -->
+
+    <main class="t-main-container">
+      <div class="t-manager-section">
+        <div class="t-menu-bar scrollbar-hide">
+          <nav class="menu-sec">
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon1.svg" alt=""
+            /></a>
+            <a class="menu-item active" href="./task-manager.html"
+              ><img src="./assets/icons/nav/icon2.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon3.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon4.svg" alt=""
+            /></a>
+            <a class="menu-item" href=""
+              ><img src="./assets/icons/nav/icon5.svg" alt=""
+            /></a>
+          </nav>
+        </div>
+
+        <div class="task-section">
+          <div class="t-breadcrumb-sec">
+            <nav>
+              <ol class="breadcrumb body-regular">
+                <li class="breadcrumb-item">
+                  <a href="/project.html" class="color-primary"
+                    ><img src="./assets/icons/arrow-left.svg" alt="" />
+                    Projects</a
+                  >
+                </li>
+                <li class="breadcrumb-item active">Moru nature Stays</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="flex-layout">
+            <div class="timeline-layout">
+              <div class="timeline-section">
+                <div class="timeline-block timeline-block-right">
+                  <div class="marker complete">
+                    <div class="d-flex">
+                      Project created
+                      <img src="/assets/icons/double-check.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-block timeline-block-left">
+                  <div class="marker in-progress">
+                    <div>
+                      Project created
+                      <img src="/assets/icons/creater.svg" alt="" />
+                    </div>
+                    <div class="d-flex align-items-start">
+                      <div class="custom-badge">In progress</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-block timeline-block-right active">
+                  <div class="marker">
+                    <div class="d-flex">
+                      New Stage
+                      <img src="/assets/icons/edit-project.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-block timeline-block-left">
+                  <div class="marker">
+                    <div class="d-flex">
+                      New Stage
+                      <img src="/assets/icons/edit-project.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-block timeline-block-right">
+                  <div class="marker">
+                    <div class="d-flex">
+                      New Stage
+                      <img src="/assets/icons/edit-project.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="t-bottom-corner-action">
+      <div class="t-timeline-container d-none">
+        <div class="timeline-header">
+          <div class="title7">Activity</div>
+          <div>
+            <button type="button" class="btn btn-link">
+              <img src="./assets/icons/menu-h.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-link">
+              <img src="./assets/icons/more-down-vert.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-link" id="hideActivity">
+              <img src="./assets/icons/minus.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="timeline-style">
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Jenny Wilson</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Commented on <a href="">Tooliqa project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Wade Warren</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Commented on <a href="">Tooliqa project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn-style-none" id="activity">
+          <img src="./assets/icons/simple-comment.svg" alt="" />
+        </button>
+        <button class="btn-style-none">
+          <img src="./assets/icons/time.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      title="show project team"
+      class="t-project-team-button"
+      id="projectTeam"
+    >
+      <span class="txt-plus">+</span>
+    </button>
+  </body>
+</html>
