@@ -279,7 +279,126 @@
                 </div>
               </div>
             </div>
-            <div></div>
+            <div class="flex-grow-1 dragable-card">
+              <table class="table w-full">
+                <tr>
+                  <th></th>
+                  <th>Task</th>
+                  <th>Assign To</th>
+                  <th>Due Date</th>
+                  <th>Tags</th>
+                  <th>action</th>
+                </tr>
+              </table>
+              <div class="card">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingOne">
+                      <div class="accordion-button">
+                        <table class="table table-bordered w-full">
+                          <tr>
+                            <td>
+                              <div class="d-flex">
+                                <button class="btn-style-none">
+                                  <img src="/assets/icons/drag.svg" alt="" />
+                                </button>
+                                <div class="t-color-select">
+                                  <button
+                                    type="button"
+                                    class="btn btn-toggle-custom"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                  ></button>
+                                  <ul class="dropdown-menu">
+                                    <li>
+                                      <div class="color-box green"></div>
+                                    </li>
+                                    <li>
+                                      <div class="color-box red"></div>
+                                    </li>
+                                    <li><div class="color-box blue"></div></li>
+                                    <li>
+                                      <div class="color-box yellow"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <input
+                                class="form-control"
+                                type="text"
+                                placeholder="3 D modelling of the living room"
+                              />
+                            </td>
+                            <td>
+                              <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Robert Fox"
+                              />
+                            </td>
+                            <td>
+                              <input class="form-control" type="date" />
+                            </td>
+                            <td>
+                              <span class="badge bg-secondary">Default</span>
+                            </td>
+                            <td>
+                              <button class="btn-style-none">
+                                <img src="/assets/icons/download.svg" alt="" />
+                              </button>
+                              <button class="btn-style-none">
+                                <img src="/assets/icons/delete.svg" alt="" />
+                              </button>
+                            </td>
+                          </tr>
+                        </table>
+                        <button
+                          type="button"
+                          class="btn-style-none btn-accordian"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          <img src="/assets/icons/more-down-vert.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <table width="100%">
+                          <td>
+                            <button class="btn-style-none">
+                              <img src="/assets/icons/file.svg" alt="" />
+                            </button>
+                          </td>
+                          <td>
+                            <textarea
+                              class="form-control"
+                              id="exampleFormControlTextarea1"
+                              rows="3"
+                              placeholder="Add description"
+                            ></textarea>
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-secondary">
+                              Upload
+                            </button>
+                          </td>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

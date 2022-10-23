@@ -5,6 +5,7 @@
   .flex-layout {
     display: flex;
     padding: 5px;
+    gap: 10px;
   }
 
   .task-section {
@@ -88,6 +89,32 @@
       width: 95%;
       padding: 0 15px;
       color: #666;
+    }
+  }
+
+  // w-full
+  .w-full {
+    // width: 100vw;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    display: none;
+  }
+
+  .accordion-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion-button {
+    padding: 0;
+  }
+
+  // dragable-card
+  .dragable-card {
+    .form-control {
+      background: none;
+      border: none;
     }
   }
 }
