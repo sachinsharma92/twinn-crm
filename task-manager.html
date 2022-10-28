@@ -344,648 +344,654 @@
               </div>
             </div>
             <div class="flex-grow-1 dragable-card">
-              <table class="table w-full">
-                <tr>
-                  <th class="drag-header"></th>
-                  <th class="task-sec">Task</th>
-                  <th>Assign To</th>
-                  <th>Due Date</th>
-                  <th>Tags</th>
-                  <th class="t-action-bar">
-                    <!-- <button type="button" class="btn-style-none btn-accordian">
+              <div>
+                <table class="table w-full">
+                  <tr>
+                    <th class="drag-header"></th>
+                    <th class="task-sec">Task</th>
+                    <th>Assign To</th>
+                    <th>Due Date</th>
+                    <th>Tags</th>
+                    <th class="t-action-bar">
+                      <!-- <button type="button" class="btn-style-none btn-accordian">
                       <img src="/assets/icons/more-down-vert.svg" alt="" />
                     </button> -->
-                    <div class="t-filter-action">
-                      <button type="button" class="btn btn-link" id="btnFilter">
-                        <img src="./assets/icons/more-down-vert.svg" alt="" />
-                      </button>
+                      <div class="t-filter-action">
+                        <button
+                          type="button"
+                          class="btn btn-link"
+                          id="btnFilter"
+                        >
+                          <img src="./assets/icons/more-down-vert.svg" alt="" />
+                        </button>
 
-                      <div id="filterData" class="filter-card d-none">
-                        <div class="form-section">
-                          <div class="header-sec">
-                            <div class="title7">Filters</div>
-                            <a href="#" class="link">Reset to Default</a>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="form-sec">
-                                <label class="form-label">Client Name</label>
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Choose an option</option>
-                                  <option value="1">Delhi</option>
-                                  <option value="2">Goa</option>
-                                  <option value="3">Haryana</option>
-                                </select>
-                              </div>
+                        <div id="filterData" class="filter-card d-none">
+                          <div class="form-section">
+                            <div class="header-sec">
+                              <div class="title7">Filters</div>
+                              <a href="#" class="link">Reset to Default</a>
                             </div>
-                            <div class="col-12">
-                              <div class="form-sec">
-                                <label class="form-label">Project Type</label>
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Choose an option</option>
-                                  <option value="1">Project Type 1</option>
-                                  <option value="2">Project Type 2</option>
-                                  <option value="3">Project Type 3</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="form-sec">
-                                <label class="form-label"
-                                  >Timeline Status</label
-                                >
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Choose an option</option>
-                                  <option value="1">India</option>
-                                  <option value="2">Pakistan</option>
-                                  <option value="3">China</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="d-flex flex-column">
-                              <label class="form-label">Start Date</label>
-                              <div class="date-section gap-2">
+                            <div class="row">
+                              <div class="col-12">
                                 <div class="form-sec">
-                                  <input
-                                    type="date"
-                                    class="form-control"
-                                    placeholder=""
-                                  />
-                                </div>
-                                <div class="form-sec">
-                                  <input
-                                    type="date"
-                                    class="form-control"
-                                    placeholder=""
-                                  />
+                                  <label class="form-label">Client Name</label>
+                                  <select
+                                    class="form-select"
+                                    aria-label="Default select example"
+                                  >
+                                    <option selected>Choose an option</option>
+                                    <option value="1">Delhi</option>
+                                    <option value="2">Goa</option>
+                                    <option value="3">Haryana</option>
+                                  </select>
                                 </div>
                               </div>
+                              <div class="col-12">
+                                <div class="form-sec">
+                                  <label class="form-label">Project Type</label>
+                                  <select
+                                    class="form-select"
+                                    aria-label="Default select example"
+                                  >
+                                    <option selected>Choose an option</option>
+                                    <option value="1">Project Type 1</option>
+                                    <option value="2">Project Type 2</option>
+                                    <option value="3">Project Type 3</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-sec">
+                                  <label class="form-label"
+                                    >Timeline Status</label
+                                  >
+                                  <select
+                                    class="form-select"
+                                    aria-label="Default select example"
+                                  >
+                                    <option selected>Choose an option</option>
+                                    <option value="1">India</option>
+                                    <option value="2">Pakistan</option>
+                                    <option value="3">China</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-column">
+                                <label class="form-label">Start Date</label>
+                                <div class="date-section gap-2">
+                                  <div class="form-sec">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      placeholder=""
+                                    />
+                                  </div>
+                                  <div class="form-sec">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      placeholder=""
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
 
-                          <div class="footer-list">
-                            <h5 class="title5">Sort by</h5>
-                            <ul class="list-check-style">
-                              <li class="list-item">Latest created</li>
-                              <li class="list-item active">
-                                Start date: ascending to descending
-                              </li>
-                              <li class="list-item">
-                                Start date: descending to ascending
-                              </li>
-                            </ul>
+                            <div class="footer-list">
+                              <h5 class="title5">Sort by</h5>
+                              <ul class="list-check-style">
+                                <li class="list-item">Latest created</li>
+                                <li class="list-item active">
+                                  Start date: ascending to descending
+                                </li>
+                                <li class="list-item">
+                                  Start date: descending to ascending
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </th>
-                </tr>
-              </table>
-              <div class="card">
-                <div>
-                  <table class="table w-full">
-                    <tr class="flex-style">
-                      <td class="drag-section">
-                        <div class="d-flex">
-                          <button class="btn-style-none">
-                            <img src="/assets/icons/drag.svg" alt="" />
-                          </button>
-                          <div class="t-color-select">
-                            <button
-                              type="button"
-                              class="btn btn-toggle-custom"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            ></button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <span class="color-box green"></span>
-                                Complete
-                              </li>
-                              <li>
-                                <span class="color-box blue"></span>
-                                In Progress
-                              </li>
-                              <li>
-                                <span class="color-box yellow"></span>
-                                On Hold
-                              </li>
-                              <li>
-                                <span class="color-box red"></span>
-                                Delete
-                              </li>
-                            </ul>
+                    </th>
+                  </tr>
+                </table>
+                <div class="card">
+                  <div>
+                    <table class="table w-full">
+                      <tr class="flex-style">
+                        <td class="drag-section">
+                          <div class="d-flex">
+                            <button class="btn-style-none">
+                              <img src="/assets/icons/drag.svg" alt="" />
+                            </button>
+                            <div class="t-color-select">
+                              <button
+                                type="button"
+                                class="btn btn-toggle-custom"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              ></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <span class="color-box green"></span>
+                                  Complete
+                                </li>
+                                <li>
+                                  <span class="color-box blue"></span>
+                                  In Progress
+                                </li>
+                                <li>
+                                  <span class="color-box yellow"></span>
+                                  On Hold
+                                </li>
+                                <li>
+                                  <span class="color-box red"></span>
+                                  Delete
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td class="task-sec border-l">
-                        <input
-                          class="form-control"
-                          type="text"
-                          placeholder="3 D modelling of the living room"
-                        />
-                      </td>
-                      <td class="assign-to-sec border-l">
-                        <div class="input-group">
+                        </td>
+                        <td class="task-sec border-l">
                           <input
-                            type="text"
                             class="form-control"
-                            placeholder="Robert Fox"
+                            type="text"
+                            placeholder="3 D modelling of the living room"
                           />
-                          <img src="/assets/icons/user.svg" alt="" />
-                        </div>
-                      </td>
-                      <td class="date-sec border-l">
-                        <input class="form-control" type="date" />
-                      </td>
-                      <td class="tag-sec border-l">
-                        <button
-                          class="btn-badge-style"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <span class="badge-style">Medium</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <span class="badge-style">Default</span>
-                          </li>
-                          <li>
-                            <span class="badge-style medium">Medium</span>
-                          </li>
-                          <li>
-                            <span class="badge-style high">High</span>
-                          </li>
-                          <li>
-                            <span class="badge-style low">Low</span>
-                          </li>
-                        </ul>
-                      </td>
-                      <td class="action-sec border-l">
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/download.svg" alt="" />
-                        </button>
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/delete.svg" alt="" />
-                        </button>
-                        <button
-                          type="button"
-                          class="btn-style-none btn-accordian"
-                          data-bs-toggle="collapse"
-                          href="#collapse1"
-                        >
-                          <img src="/assets/icons/arrow-down.svg" alt="" />
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div id="collapse1">
-                  <table width="100%">
-                    <tr class="flex-style">
-                      <td class="file-sec">
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/file.svg" alt="" />
-                        </button>
-                      </td>
-                      <td class="textarea-section border-l border-r">
-                        <div class="t-editor-box">
-                          <div id="editor">Add description</div>
-                        </div>
-                      </td>
-                      <td class="text-center upload-sec">
-                        <button
-                          type="button"
-                          class="btn-upload"
-                          data-bs-toggle="modal"
-                          data-bs-target="#uploadModal"
-                        >
-                          <img src="/assets/icons/download-2.svg" alt="" />
-                          Upload Files
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="card">
-                <div>
-                  <table class="table w-full">
-                    <tr class="flex-style">
-                      <td class="drag-section">
-                        <div class="d-flex">
-                          <button class="btn-style-none">
-                            <img src="/assets/icons/drag.svg" alt="" />
+                        </td>
+                        <td class="assign-to-sec border-l">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Robert Fox"
+                            />
+                            <img src="/assets/icons/user.svg" alt="" />
+                          </div>
+                        </td>
+                        <td class="date-sec border-l">
+                          <input class="form-control" type="date" />
+                        </td>
+                        <td class="tag-sec border-l">
+                          <button
+                            class="btn-badge-style"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="badge-style">Medium</span>
                           </button>
-                          <div class="t-color-select">
-                            <button
-                              type="button"
-                              class="btn btn-toggle-custom"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            ></button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <span class="color-box green"></span>
-                                Complete
-                              </li>
-                              <li>
-                                <span class="color-box blue"></span>
-                                In Progress
-                              </li>
-                              <li>
-                                <span class="color-box yellow"></span>
-                                On Hold
-                              </li>
-                              <li>
-                                <span class="color-box red"></span>
-                                Delete
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="task-sec border-l">
-                        <input
-                          class="form-control"
-                          type="text"
-                          placeholder="3 D modelling of the living room"
-                        />
-                      </td>
-                      <td class="assign-to-sec border-l">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Robert Fox"
-                          />
-                          <img src="/assets/icons/user.svg" alt="" />
-                        </div>
-                      </td>
-                      <td class="date-sec border-l">
-                        <input class="form-control" type="date" />
-                      </td>
-                      <td class="tag-sec border-l">
-                        <button
-                          class="btn-badge-style"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <span class="badge-style low">Low</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <span class="badge-style">Default</span>
-                          </li>
-                          <li>
-                            <span class="badge-style medium">Medium</span>
-                          </li>
-                          <li>
-                            <span class="badge-style high">High</span>
-                          </li>
-                          <li>
-                            <span class="badge-style low">Low</span>
-                          </li>
-                        </ul>
-                      </td>
-                      <td class="action-sec border-l">
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/download.svg" alt="" />
-                        </button>
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/delete.svg" alt="" />
-                        </button>
-                        <button
-                          type="button"
-                          class="btn-style-none btn-accordian"
-                          data-bs-toggle="collapse"
-                          href="#collapse2"
-                        >
-                          <img src="/assets/icons/arrow-down.svg" alt="" />
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div id="collapse2">
-                  <table width="100%">
-                    <tr class="flex-style">
-                      <td class="file-sec">
-                        <button class="btn-style-none">
-                          <img
-                            src="/assets/icons/file.svg"
-                            class="gray"
-                            alt=""
-                          />
-                        </button>
-                      </td>
-                      <td class="textarea-section border-l border-r">
-                        <textarea
-                          class="form-control"
-                          id="exampleFormControlTextarea1"
-                          rows="5"
-                          placeholder="Add description"
-                        ></textarea>
-                      </td>
-                      <td class="text-center upload-sec">
-                        <div class="image-box-sec">
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
-                          </div>
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
-                          </div>
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
-                          </div>
-                          <button class="img-box">+ 5</button>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="card">
-                <div>
-                  <table class="table w-full">
-                    <tr class="flex-style">
-                      <td class="drag-section">
-                        <div class="d-flex">
+                          <ul class="dropdown-menu">
+                            <li>
+                              <span class="badge-style">Default</span>
+                            </li>
+                            <li>
+                              <span class="badge-style medium">Medium</span>
+                            </li>
+                            <li>
+                              <span class="badge-style high">High</span>
+                            </li>
+                            <li>
+                              <span class="badge-style low">Low</span>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="action-sec border-l">
                           <button class="btn-style-none">
-                            <img src="/assets/icons/drag.svg" alt="" />
+                            <img src="/assets/icons/download.svg" alt="" />
                           </button>
-                          <div class="t-color-select">
-                            <button
-                              type="button"
-                              class="btn btn-toggle-custom"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            ></button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <span class="color-box green"></span>
-                                Complete
-                              </li>
-                              <li>
-                                <span class="color-box blue"></span>
-                                In Progress
-                              </li>
-                              <li>
-                                <span class="color-box yellow"></span>
-                                On Hold
-                              </li>
-                              <li>
-                                <span class="color-box red"></span>
-                                Delete
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="task-sec border-l">
-                        <input
-                          class="form-control"
-                          type="text"
-                          placeholder="3 D modelling of the living room"
-                        />
-                      </td>
-                      <td class="assign-to-sec border-l">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Robert Fox"
-                          />
-                          <img src="/assets/icons/user.svg" alt="" />
-                        </div>
-                      </td>
-                      <td class="date-sec border-l">
-                        <input class="form-control" type="date" />
-                      </td>
-                      <td class="tag-sec border-l">
-                        <button
-                          class="btn-badge-style"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <span class="badge-style medium">Medium</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <span class="badge-style">Default</span>
-                          </li>
-                          <li>
-                            <span class="badge-style medium">Medium</span>
-                          </li>
-                          <li>
-                            <span class="badge-style high">High</span>
-                          </li>
-                          <li>
-                            <span class="badge-style low">Low</span>
-                          </li>
-                        </ul>
-                      </td>
-                      <td class="action-sec border-l">
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/download.svg" alt="" />
-                        </button>
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/delete.svg" alt="" />
-                        </button>
-                        <button
-                          type="button"
-                          class="btn-style-none btn-accordian"
-                          data-bs-toggle="collapse"
-                          href="#collapse3"
-                        >
-                          <img src="/assets/icons/arrow-down.svg" alt="" />
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div id="collapse3">
-                  <table width="100%">
-                    <tr class="flex-style">
-                      <td class="file-sec">
-                        <button class="btn-style-none">
-                          <img
-                            src="/assets/icons/file.svg"
-                            class="gray"
-                            alt=""
-                          />
-                        </button>
-                      </td>
-                      <td class="textarea-section border-l border-r">
-                        <textarea
-                          class="form-control"
-                          id="exampleFormControlTextarea1"
-                          rows="5"
-                          placeholder="Add description"
-                        ></textarea>
-                      </td>
-                      <td class="text-center upload-sec">
-                        <div class="image-box-sec">
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
-                          </div>
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
-                          </div>
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
-                          </div>
-                          <button class="img-box">+ 5</button>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="card">
-                <div>
-                  <table class="table w-full">
-                    <tr class="flex-style">
-                      <td class="drag-section">
-                        <div class="d-flex">
                           <button class="btn-style-none">
-                            <img src="/assets/icons/drag.svg" alt="" />
+                            <img src="/assets/icons/delete.svg" alt="" />
                           </button>
-                          <div class="t-color-select">
-                            <button
-                              type="button"
-                              class="btn btn-toggle-custom"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            ></button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <span class="color-box green"></span>
-                                Complete
-                              </li>
-                              <li>
-                                <span class="color-box blue"></span>
-                                In Progress
-                              </li>
-                              <li>
-                                <span class="color-box yellow"></span>
-                                On Hold
-                              </li>
-                              <li>
-                                <span class="color-box red"></span>
-                                Delete
-                              </li>
-                            </ul>
+                          <button
+                            type="button"
+                            class="btn-style-none btn-accordian"
+                            data-bs-toggle="collapse"
+                            href="#collapse1"
+                          >
+                            <img src="/assets/icons/arrow-down.svg" alt="" />
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="collapse1">
+                    <table width="100%">
+                      <tr class="flex-style">
+                        <td class="file-sec">
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/file.svg" alt="" />
+                          </button>
+                        </td>
+                        <td class="textarea-section border-l border-r">
+                          <div class="t-editor-box">
+                            <div id="editor">Add description</div>
                           </div>
-                        </div>
-                      </td>
-                      <td class="task-sec border-l">
-                        <input
-                          class="form-control"
-                          type="text"
-                          placeholder="3 D modelling of the living room"
-                        />
-                      </td>
-                      <td class="assign-to-sec border-l">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Robert Fox"
-                          />
-                          <img src="/assets/icons/user.svg" alt="" />
-                        </div>
-                      </td>
-                      <td class="date-sec border-l">
-                        <input class="form-control" type="date" />
-                      </td>
-                      <td class="tag-sec border-l">
-                        <button
-                          class="btn-badge-style"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <span class="badge-style high">High</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <span class="badge-style">Default</span>
-                          </li>
-                          <li>
-                            <span class="badge-style medium">Medium</span>
-                          </li>
-                          <li>
-                            <span class="badge-style high">High</span>
-                          </li>
-                          <li>
-                            <span class="badge-style low">Low</span>
-                          </li>
-                        </ul>
-                      </td>
-                      <td class="action-sec border-l">
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/download.svg" alt="" />
-                        </button>
-                        <button class="btn-style-none">
-                          <img src="/assets/icons/delete.svg" alt="" />
-                        </button>
-                        <button
-                          type="button"
-                          class="btn-style-none btn-accordian"
-                          data-bs-toggle="collapse"
-                          href="#collapse4"
-                        >
-                          <img src="/assets/icons/arrow-down.svg" alt="" />
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
+                        </td>
+                        <td class="text-center upload-sec">
+                          <button
+                            type="button"
+                            class="btn-upload"
+                            data-bs-toggle="modal"
+                            data-bs-target="#uploadModal"
+                          >
+                            <img src="/assets/icons/download-2.svg" alt="" />
+                            Upload Files
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
-                <div id="collapse4">
-                  <table width="100%">
-                    <tr class="flex-style">
-                      <td class="file-sec">
-                        <button class="btn-style-none">
-                          <img
-                            src="/assets/icons/file.svg"
-                            class="gray"
-                            alt=""
+                <div class="card">
+                  <div>
+                    <table class="table w-full">
+                      <tr class="flex-style">
+                        <td class="drag-section">
+                          <div class="d-flex">
+                            <button class="btn-style-none">
+                              <img src="/assets/icons/drag.svg" alt="" />
+                            </button>
+                            <div class="t-color-select">
+                              <button
+                                type="button"
+                                class="btn btn-toggle-custom"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              ></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <span class="color-box green"></span>
+                                  Complete
+                                </li>
+                                <li>
+                                  <span class="color-box blue"></span>
+                                  In Progress
+                                </li>
+                                <li>
+                                  <span class="color-box yellow"></span>
+                                  On Hold
+                                </li>
+                                <li>
+                                  <span class="color-box red"></span>
+                                  Delete
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="task-sec border-l">
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="3 D modelling of the living room"
                           />
-                        </button>
-                      </td>
-                      <td class="textarea-section border-l border-r">
-                        <textarea
-                          class="form-control"
-                          id="exampleFormControlTextarea1"
-                          rows="5"
-                          placeholder="Add description"
-                        ></textarea>
-                      </td>
-                      <td class="text-center upload-sec">
-                        <div class="image-box-sec">
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
+                        </td>
+                        <td class="assign-to-sec border-l">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Robert Fox"
+                            />
+                            <img src="/assets/icons/user.svg" alt="" />
                           </div>
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
+                        </td>
+                        <td class="date-sec border-l">
+                          <input class="form-control" type="date" />
+                        </td>
+                        <td class="tag-sec border-l">
+                          <button
+                            class="btn-badge-style"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="badge-style low">Low</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <span class="badge-style">Default</span>
+                            </li>
+                            <li>
+                              <span class="badge-style medium">Medium</span>
+                            </li>
+                            <li>
+                              <span class="badge-style high">High</span>
+                            </li>
+                            <li>
+                              <span class="badge-style low">Low</span>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="action-sec border-l">
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/download.svg" alt="" />
+                          </button>
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/delete.svg" alt="" />
+                          </button>
+                          <button
+                            type="button"
+                            class="btn-style-none btn-accordian"
+                            data-bs-toggle="collapse"
+                            href="#collapse2"
+                          >
+                            <img src="/assets/icons/arrow-down.svg" alt="" />
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="collapse2">
+                    <table width="100%">
+                      <tr class="flex-style">
+                        <td class="file-sec">
+                          <button class="btn-style-none">
+                            <img
+                              src="/assets/icons/file.svg"
+                              class="gray"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                        <td class="textarea-section border-l border-r">
+                          <textarea
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="5"
+                            placeholder="Add description"
+                          ></textarea>
+                        </td>
+                        <td class="text-center upload-sec">
+                          <div class="image-box-sec">
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <button class="img-box">+ 5</button>
                           </div>
-                          <div class="img-box">
-                            <img src="/assets/img1.jpg" alt="" />
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="card">
+                  <div>
+                    <table class="table w-full">
+                      <tr class="flex-style">
+                        <td class="drag-section">
+                          <div class="d-flex">
+                            <button class="btn-style-none">
+                              <img src="/assets/icons/drag.svg" alt="" />
+                            </button>
+                            <div class="t-color-select">
+                              <button
+                                type="button"
+                                class="btn btn-toggle-custom"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              ></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <span class="color-box green"></span>
+                                  Complete
+                                </li>
+                                <li>
+                                  <span class="color-box blue"></span>
+                                  In Progress
+                                </li>
+                                <li>
+                                  <span class="color-box yellow"></span>
+                                  On Hold
+                                </li>
+                                <li>
+                                  <span class="color-box red"></span>
+                                  Delete
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                          <button class="img-box">+ 5</button>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
+                        </td>
+                        <td class="task-sec border-l">
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="3 D modelling of the living room"
+                          />
+                        </td>
+                        <td class="assign-to-sec border-l">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Robert Fox"
+                            />
+                            <img src="/assets/icons/user.svg" alt="" />
+                          </div>
+                        </td>
+                        <td class="date-sec border-l">
+                          <input class="form-control" type="date" />
+                        </td>
+                        <td class="tag-sec border-l">
+                          <button
+                            class="btn-badge-style"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="badge-style medium">Medium</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <span class="badge-style">Default</span>
+                            </li>
+                            <li>
+                              <span class="badge-style medium">Medium</span>
+                            </li>
+                            <li>
+                              <span class="badge-style high">High</span>
+                            </li>
+                            <li>
+                              <span class="badge-style low">Low</span>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="action-sec border-l">
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/download.svg" alt="" />
+                          </button>
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/delete.svg" alt="" />
+                          </button>
+                          <button
+                            type="button"
+                            class="btn-style-none btn-accordian"
+                            data-bs-toggle="collapse"
+                            href="#collapse3"
+                          >
+                            <img src="/assets/icons/arrow-down.svg" alt="" />
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="collapse3">
+                    <table width="100%">
+                      <tr class="flex-style">
+                        <td class="file-sec">
+                          <button class="btn-style-none">
+                            <img
+                              src="/assets/icons/file.svg"
+                              class="gray"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                        <td class="textarea-section border-l border-r">
+                          <textarea
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="5"
+                            placeholder="Add description"
+                          ></textarea>
+                        </td>
+                        <td class="text-center upload-sec">
+                          <div class="image-box-sec">
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <button class="img-box">+ 5</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="card">
+                  <div>
+                    <table class="table w-full">
+                      <tr class="flex-style">
+                        <td class="drag-section">
+                          <div class="d-flex">
+                            <button class="btn-style-none">
+                              <img src="/assets/icons/drag.svg" alt="" />
+                            </button>
+                            <div class="t-color-select">
+                              <button
+                                type="button"
+                                class="btn btn-toggle-custom"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              ></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <span class="color-box green"></span>
+                                  Complete
+                                </li>
+                                <li>
+                                  <span class="color-box blue"></span>
+                                  In Progress
+                                </li>
+                                <li>
+                                  <span class="color-box yellow"></span>
+                                  On Hold
+                                </li>
+                                <li>
+                                  <span class="color-box red"></span>
+                                  Delete
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="task-sec border-l">
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="3 D modelling of the living room"
+                          />
+                        </td>
+                        <td class="assign-to-sec border-l">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Robert Fox"
+                            />
+                            <img src="/assets/icons/user.svg" alt="" />
+                          </div>
+                        </td>
+                        <td class="date-sec border-l">
+                          <input class="form-control" type="date" />
+                        </td>
+                        <td class="tag-sec border-l">
+                          <button
+                            class="btn-badge-style"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="badge-style high">High</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <span class="badge-style">Default</span>
+                            </li>
+                            <li>
+                              <span class="badge-style medium">Medium</span>
+                            </li>
+                            <li>
+                              <span class="badge-style high">High</span>
+                            </li>
+                            <li>
+                              <span class="badge-style low">Low</span>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="action-sec border-l">
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/download.svg" alt="" />
+                          </button>
+                          <button class="btn-style-none">
+                            <img src="/assets/icons/delete.svg" alt="" />
+                          </button>
+                          <button
+                            type="button"
+                            class="btn-style-none btn-accordian"
+                            data-bs-toggle="collapse"
+                            href="#collapse4"
+                          >
+                            <img src="/assets/icons/arrow-down.svg" alt="" />
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="collapse4">
+                    <table width="100%">
+                      <tr class="flex-style">
+                        <td class="file-sec">
+                          <button class="btn-style-none">
+                            <img
+                              src="/assets/icons/file.svg"
+                              class="gray"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                        <td class="textarea-section border-l border-r">
+                          <textarea
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="5"
+                            placeholder="Add description"
+                          ></textarea>
+                        </td>
+                        <td class="text-center upload-sec">
+                          <div class="image-box-sec">
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <div class="img-box">
+                              <img src="/assets/img1.jpg" alt="" />
+                            </div>
+                            <button class="img-box">+ 5</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>

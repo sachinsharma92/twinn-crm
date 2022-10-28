@@ -23,6 +23,10 @@
     width: 167px;
     min-height: calc(100vh - 170px);
 
+    @include mobile {
+      display: none;
+    }
+
     .active-line {
       position: relative;
 
@@ -210,6 +214,12 @@
   // dragable-card
   .dragable-card {
     padding-bottom: 150px;
+
+    @include mobile {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: scroll;
+    }
 
     .form-control {
       background: none;
