@@ -1025,3 +1025,93 @@ input.form-control,
     }
   }
 }
+
+// Upload Modals
+.t-upload-modal {
+  .modal-dialog {
+    max-width: 600px;
+  }
+  .title7 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .head-sec {
+    margin-top: 30px;
+    max-width: 60%;
+  }
+
+  .btn-file {
+    padding: 0 20px;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .files-upload {
+    .btn {
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .modal-footer {
+    border: none;
+    margin-top: 50px;
+    padding: 30px;
+  }
+
+  .modal-body {
+    padding: 30px;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .file-list {
+    margin-top: 20px;
+
+    .file-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0;
+
+      .file-block {
+        background: $gray-e;
+        height: 40px;
+        border-radius: 2px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .modal-content {
+    border-radius: 0;
+  }
+}
+
+// editor-box
+.t-editor-box {
+  .cke_chrome {
+    border: none;
+  }
+
+  .cke_bottom {
+    background: none;
+    border: none;
+  }
+}
