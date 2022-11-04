@@ -43,6 +43,19 @@
         background-position: right;
       }
     }
+
+    .button-add {
+      width: 32px;
+      height: 32px;
+      background: $theme-primary;
+      border-radius: 100%;
+      border: none;
+      color: $white;
+      position: relative;
+      z-index: 9;
+      font-weight: 500;
+      font-size: 20px;
+    }
   }
 
   .timeline-section {

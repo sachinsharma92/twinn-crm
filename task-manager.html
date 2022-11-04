@@ -119,6 +119,15 @@
         //   { name: "colors", items: ["TextColor", "BGColor"] },
         // ];
         // CKEDITOR.instances["ckplot"].setData("<h1> data to render</h1>");
+
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl, {
+            customClass: "custom-tooltip",
+          });
+        });
       });
     </script>
   </head>
@@ -249,19 +258,44 @@
       <div class="t-manager-section">
         <div class="t-menu-bar scrollbar-hide">
           <nav class="menu-sec">
-            <a class="menu-item" href=""
+            <a
+              class="menu-item"
+              href="./project-details.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-title="Project Details"
               ><img src="./assets/icons/nav/icon1.svg" alt=""
             /></a>
-            <a class="menu-item active" href="./task-manager.html"
+            <a
+              class="menu-item active"
+              href="./task-manager.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-title="Task Manager"
               ><img src="./assets/icons/nav/icon2.svg" alt=""
             /></a>
-            <a class="menu-item" href=""
+            <a
+              class="menu-item"
+              href=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-title="nav link"
               ><img src="./assets/icons/nav/icon3.svg" alt=""
             /></a>
-            <a class="menu-item" href=""
+            <a
+              class="menu-item"
+              href=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-title="nav link"
               ><img src="./assets/icons/nav/icon4.svg" alt=""
             /></a>
-            <a class="menu-item" href=""
+            <a
+              class="menu-item"
+              href=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-title="nav link"
               ><img src="./assets/icons/nav/icon5.svg" alt=""
             /></a>
           </nav>
@@ -341,6 +375,7 @@
                     </div>
                   </div>
                 </div>
+                <button class="button-add">+</button>
               </div>
             </div>
             <div class="flex-grow-1 dragable-card">
@@ -448,6 +483,13 @@
                                   Start date: descending to ascending
                                 </li>
                               </ul>
+                            </div>
+
+                            <div class="button-action">
+                              <button class="btn btn-outline">
+                                Reset to default
+                              </button>
+                              <button class="btn btn-primary">Apply</button>
                             </div>
                           </div>
                         </div>

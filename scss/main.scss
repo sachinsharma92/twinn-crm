@@ -368,6 +368,14 @@ input.form-control,
       }
     }
   }
+
+  .button-action {
+    border-top: 1px solid #cdcdce;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px -24px 0;
+    padding: 20px 20px 0;
+  }
 }
 
 .t-filter-action {
@@ -1114,4 +1122,9 @@ input.form-control,
     background: none;
     border: none;
   }
+}
+
+// Tooltip style
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
 }
