@@ -20,7 +20,8 @@
     padding: 8px;
     background: #efefef;
     border-radius: 4px;
-    width: 167px;
+    min-width: 167px;
+    max-width: 167px;
     min-height: calc(100vh - 170px);
 
     @include mobile {
@@ -247,10 +248,17 @@
       margin: 0;
     }
     .assign-to-sec {
-      width: 176px;
+      width: 12%;
     }
     .date-sec {
-      width: 176px;
+      width: 12%;
+    }
+
+    .heading-action-bar {
+      width: 10%;
+    }
+    .tag-head-sec {
+      width: 10%;
     }
 
     .action-sec {
@@ -259,6 +267,7 @@
       justify-content: space-between;
       flex-grow: 1;
       padding: 0 15px;
+      width: 10%;
 
       button {
         opacity: 0.7;
@@ -268,8 +277,9 @@
     .upload-sec {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       flex-grow: 1;
+      padding-left: 30px;
     }
 
     .btn-badge-style {
@@ -282,7 +292,7 @@
       align-items: center;
       justify-content: center;
       padding: 0 10px;
-      max-width: 100px;
+      width: 10%;
 
       .dropdown-menu {
         padding: 10px;
@@ -324,17 +334,17 @@
     }
 
     .task-sec {
-      width: 540px;
+      width: 50%;
     }
 
     .drag-section {
-      width: 70px;
+      width: 6%;
       display: flex;
       align-items: center;
     }
 
     .drag-header {
-      width: 70px;
+      width: 6%;
     }
 
     .card {
@@ -342,7 +352,7 @@
     }
 
     .file-sec {
-      width: 70px;
+      width: 6%;
       text-align: center;
       padding-left: 15px;
 
@@ -356,7 +366,7 @@
     }
 
     .textarea-section {
-      width: 52vw;
+      width: 78%;
     }
 
     .border-l {

@@ -45,6 +45,14 @@
           $(".t-timeline-container").addClass("d-none");
         });
 
+        $("#chatDrawer").click(function () {
+          $(".t-chat-container").removeClass("d-none");
+        });
+
+        $("#hideChatDrawer").click(function () {
+          $(".t-chat-container").addClass("d-none");
+        });
+
         // $(".t-new-project-modal").modal("show");
 
         $("#detailView").click(function () {
@@ -1106,6 +1114,194 @@
               </div>
             </div>
           </div>
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+          <div class="timeline-block timeline-block-right">
+            <div class="marker">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+            </div>
+            <div class="timeline-content">
+              <div class="body-medium">Albert Flores</div>
+              <span class="time">Today, 02:58 PM</span>
+              <div class="comment-text">
+                Added file to <a href="" class="text-warning">Twinn project</a>
+              </div>
+              <div class="card gray-card">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
+                turpis risus interdum suspendisse ultrices fusce.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-chat-container d-none">
+        <div>
+          <div class="chat-header">
+            <div class="img-box">
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+              />
+            </div>
+
+            <div class="">
+              <h5 class="title7">Moru nature stays</h5>
+              <div class="avatars">
+                <span class="avatar">
+                  <img src="https://picsum.photos/70" />
+                </span>
+                <span class="avatar">
+                  <img src="https://picsum.photos/80" />
+                </span>
+                <span class="avatar">
+                  <img src="https://picsum.photos/90" />
+                </span>
+                <span class="avatar">
+                  <img src="https://picsum.photos/100" />
+                </span>
+                <span class="avatar more"> +11 </span>
+              </div>
+            </div>
+
+            <div>
+              <button type="button" class="btn btn-link">
+                <img src="./assets/icons/more-down-vert.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-link" id="hideChatDrawer">
+                <img src="./assets/icons/minus.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="chat-msg">
+            <div class="self">
+              <div class="chat-img">
+                <img
+                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+                />
+              </div>
+              <div>
+                <span class="name body-regular sm"
+                  >Leslie Alexander
+                  <span class="date">Today, 02:58 PM</span></span
+                >
+                <div class="text-sec body-regular">
+                  A design system for enterprise-level products. .
+                </div>
+                <div class="text-sec body-regular">
+                  <div class="img">
+                    <img src="/assets/icons/ps.svg" alt="" />
+                    <div class="img-info body-regular sm">
+                      Room interior.psd
+                      <span>10 mb</span>
+                    </div>
+                  </div>
+                  Above file is room interior moodboard
+                </div>
+              </div>
+            </div>
+
+            <div class="user">
+              <div class="chat-img">
+                <img
+                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+                />
+              </div>
+              <div>
+                <span class="name body-regular sm"
+                  >Leslie Alexander
+                  <span class="date">Today, 02:58 PM</span></span
+                >
+                <div class="text-sec body-regular">
+                  A design system for enterprise-level products. .
+                </div>
+                <div class="text-sec body-regular">
+                  <div class="img">
+                    <img src="/assets/icons/ps.svg" alt="" />
+                    <div class="img-info body-regular sm">
+                      Room interior.psd
+                      <span>10 mb</span>
+                    </div>
+                  </div>
+                  Above file is room interior moodboard
+                </div>
+              </div>
+            </div>
+
+            <div class="self">
+              <div class="chat-img">
+                <img
+                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+                />
+              </div>
+              <div>
+                <span class="name body-regular sm"
+                  >Leslie Alexander
+                  <span class="date">Today, 02:58 PM</span></span
+                >
+                <div class="text-sec body-regular">
+                  A design system for enterprise-level products. .
+                </div>
+                <div class="text-sec body-regular">
+                  <div class="img">
+                    <img src="/assets/icons/ps.svg" alt="" />
+                    <div class="img-info body-regular sm">
+                      Room interior.psd
+                      <span>10 mb</span>
+                    </div>
+                  </div>
+                  Above file is room interior moodboard
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-action">
+          <input type="text" placeholder="example" class="form-control" />
+          <div class="buttons">
+            <button><img src="./assets/icons/emoji.svg" alt="" /></button>
+            <button><img src="./assets/icons/attech.svg" alt="" /></button>
+            <button><img src="./assets/icons/send.svg" alt="" /></button>
+          </div>
         </div>
       </div>
 
@@ -1113,7 +1309,7 @@
         <button class="btn-style-none" id="activity">
           <img src="./assets/icons/simple-comment.svg" alt="" />
         </button>
-        <button class="btn-style-none">
+        <button class="btn-style-none" id="chatDrawer">
           <img src="./assets/icons/time.svg" alt="" />
         </button>
       </div>
